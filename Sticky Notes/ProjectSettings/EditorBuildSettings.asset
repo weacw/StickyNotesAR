@@ -1,0 +1,14 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Artwork/Scenes/Login.unity
+    guid: 45e60769bd8e247969fa768ce09536b2
+  - enabled: 0
+    path: Assets/Artwork/Scenes/StickyNotes.unity
+    guid: 8222938850cd74e88b79b4c6a9a20328
+  m_configObjects: {}
