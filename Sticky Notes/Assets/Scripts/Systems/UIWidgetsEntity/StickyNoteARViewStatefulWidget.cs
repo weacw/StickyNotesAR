@@ -27,6 +27,7 @@ public class StickyNoteARViewState : State<StickyNoteARViewStatefulWidget>
     {
         base.initState();
         StickyNoteManagerSystem.GetStickyNote.OnFoundPanelCallBack += onFoundPanelCallBack;
+        Navigator.pushName(context, "HintView");
     }
 
     public override void dispose()

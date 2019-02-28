@@ -10,10 +10,10 @@ using Color = Unity.UIWidgets.ui.Color;
 
 public class StickyNoteCanvas : WidgetCanvas
 {
-    protected override Widget getWidget()
-    {
-        return new StickyNoteHintStatefulWidget();
-    }
+    //protected override Widget getWidget()
+    //{
+    //    return new StickyNoteHintStatefulWidget();
+    //}
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -21,7 +21,7 @@ public class StickyNoteCanvas : WidgetCanvas
     }
 
 
-    //protected override string initialRoute { get { return "/"; } }
+    protected override string initialRoute { get { return "/"; } }
     protected override Dictionary<string, WidgetBuilder> routes
     {
         get
@@ -32,6 +32,7 @@ public class StickyNoteCanvas : WidgetCanvas
                 {"StickyNoteView",(context)=>new StickyNoteStatefulWidget() },
                 {"ARView",(context)=>new StickyNoteARViewStatefulWidget() },
                 {"WriteView",(context)=>new StickyNoteWriterViewStatefulWidget() },
+                {"HintView",(context)=>new StickyNoteHintStatefulWidget() },
               //  {"FindPanelView",(context)=>new FrameAnimatfulWidgetion() }
             };
         }
@@ -192,6 +193,7 @@ public class ScreenHelper
     public static Vector2 _getScreenSize(BuildContext context)
     {
         if (mediaQueryData == null) mediaQueryData = MediaQuery.of(context);
+        Debug.Log(context == null);
         return new Vector2(mediaQueryData.size._dx, mediaQueryData.size._dy);
     }
 }
